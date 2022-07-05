@@ -23,7 +23,7 @@ public class BookController {
 	@PostMapping("/addBook")
 	public String saveBook(@RequestBody Book book) {
 		bookRepo.save(book);
-		return "Added book with id " + book.getId();
+		return "Added book with id: " + book.getId();
 	}
 	
 	@GetMapping("/books")
@@ -39,6 +39,6 @@ public class BookController {
 	@DeleteMapping("/delete/{id}")
 	public String deleteBook(@PathVariable int id) {
 		bookRepo.deleteById(id);
-		return "Book deleted with id " + id;
+		return "Book deleted with id: " + id;
 	}
 }
