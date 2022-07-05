@@ -1,7 +1,12 @@
 package io.springboot.quickstart.topic;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class Topic {
 	
+	@Id
 	public String id;
 	public String name;
 	public String description;
